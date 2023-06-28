@@ -63,18 +63,18 @@
 // console.log(`totalSalary: `, totalSalary);
 
 // задача 
-const min = 6;
-const max = 13;
-let total = 0;
+// const min = 6;
+// const max = 13;
+// let total = 0;
 
-for (let i = min; i <= max; i += 1){
-    console.log(i);
+// for (let i = min; i <= max; i += 1){
+//     console.log(i);
 
-    if(i % 2 === 0){
-        console.log('парне:' , i);
-    }
+//     if(i % 2 === 0){
+//         console.log('парне:' , i);
+//     }
 
-    if(i % 2 !== 0){
-        console.log(`не парне:`, i);
-    }
-}
+//     if(i % 2 !== 0){
+//         console.log(`не парне:`, i);
+//     }
+// }

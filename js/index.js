@@ -94,3 +94,16 @@
 // 4 undefined
 // 5 null
 // 6 false
+
+// пошук елемента за індексом
+// const string = 'Hello world';
+// console.log(string[4])
+
+// довжина елементів рядка
+// const text = 'I am a Tania';
+// console.log(text.length)
+
+// пошук останнього елемента рядка
+// const prakrice = 'I like IT';
+// console.log(prakrice[prakrice.length-1])
+

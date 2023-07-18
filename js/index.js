@@ -6,6 +6,7 @@
 // 2 Блочна\Локальна
 // 3 Функціональна
 
+// Нормалізація - приведення усіх тсимволів рядка у верхній або нижній регістр
 
 // Хойстинг-дозволяє змінній вспливати догори.
 
@@ -263,3 +264,96 @@
 
 
 // УРОК 2
+// includes - перевіряє чи входить рядок у підрядок
+// МАСИВИ
+// const friends = ['Mango', 'Alex', 'Kiwi'];
+// console.table(friends) робить масив у таблицю
+// const friends = ['Mango', 'Alex', 'Kiwi'];
+// console.log(friends)
+// console.log(friends[2]) звернення до елементу масиву
+
+// friends[1] = 'lalala'
+// console.log(friends) змінити елемент на інший
+
+
+// ПРИМИТИВИ
+// let a = 10;
+// let b = a;
+// console.log(a)
+// console.log(b)
+// КОПІЯ(Передача по значенію)
+// a = 20;
+// console.log(a)
+// console.log(b)
+
+// const a = [1,2,3];
+// const b = a;
+// console.log(a);
+// console.log(b);
+// // Передача по посиланню(зміни скрізь,працює з масивом)
+// a [0] = 500;
+// console.log(a);
+// console.log(b);
+// console.log(a === b);
+
+// const friends = ['Mango', 'Kiwi', 'Alex', 'Poly'];
+// console.table(friends)
+
+// for(const friend of friends){
+//     console.log(friend)
+// } 
+// декларативний код(коли нам не треба індекс і не потрібно змінювати елемент масиву)
+
+
+// const cart = [54, 28, 105, 70, 92, 17, 120];
+// // зробити змінну до циклу
+ // // перебираємо масив
+// for(let i = 0; i < cart.length; i += 1){
+//     console.log(cart[i]);
+// // кожний ел приплюсувати до total
+//     total += cart[i];
+// }
+// console.log('Total:', total);
+
+
+
+// визначити парні числа
+const numbers = [1, 5, 6, 10, 20, 16, 13];
+let total = 0;
+
+// for (let i = 0; i < numbers.length; i += 1){
+// console.log(numbers[i]);
+//     if(numbers[i] % 2 === 0){
+//         console.log('Парне')
+
+//         total += numbers[i];
+//     }
+// }
+
+// for(const number of numbers){
+//     if(number % 2 === 0){
+//         console.log(`${number} - lalala`);
+//         total += number;
+//     }
+// }
+// console.log('Total :' , total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

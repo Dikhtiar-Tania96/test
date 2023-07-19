@@ -339,11 +339,18 @@ let total = 0;
 // console.log('Total :' , total)
 
 
+// const logins = ['hj6jhjhTbm', 'klklk4III', 'klks87dgRR7'];
+// const loginToFind = 'klklk4III';
+// let message = '`Користувач ${loginToFind} не знайдено`';
 
+// for(let i = 0; i <logins.length; i += 1){
+//     const login = logins[i];
 
-
-
-
+// if (login === loginToFind){
+//     message = `Користувач ${loginToFind} знайдено`;
+//     break;  
+// }}
+// console.log(message)
 
 
 

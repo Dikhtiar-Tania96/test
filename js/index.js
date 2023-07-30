@@ -318,8 +318,8 @@
 
 
 // визначити парні числа
-const numbers = [1, 5, 6, 10, 20, 16, 13];
-let total = 0;
+// const numbers = [1, 5, 6, 10, 20, 16, 13];
+// let total = 0;
 
 // for (let i = 0; i < numbers.length; i += 1){
 // console.log(numbers[i]);
@@ -351,6 +351,253 @@ let total = 0;
 //     break;  
 // }}
 // console.log(message)
+
+
+// ЗНАЙТИ НАЙМЕНШЕ ЧИСЛО
+// const numbers = [51, 8, 24, 7, 19];
+// let smallNumber = numbers[0];
+
+// for(const number of numbers){
+//     console.log(number)
+//     if(number < smallNumber){
+//         smallNumber = number;
+//     }
+// }
+// console.log('smallNumber: ', smallNumber);
+
+
+// ЗНАЙТИ НАЙБІЛЬШЕ ЧИСЛО
+// const numbers = [51, 8, 24, 7, 19];
+// let maxNumber = numbers[0];
+// for(const number of numbers){
+// if(number > maxNumber){
+//     maxNumber = number;
+// }
+// }
+// console.log('maxNumber : ', maxNumber)
+
+
+// ЗШИТИ МАСИВ У ОДИН РЯДОК
+// const friends = ['Mango', 'Poly', 'Alex'];
+// let string = '';
+// for( const friend of friends){
+//     string+= friend + ',';
+// }
+// string = string.slice(0, -1); прибрали у кінці кому
+// console.log(string);
+
+// const string = friends.join('---'); зшиває рядок,у дужках вказали чим розділяємо слова
+// console.log(string);
+
+// // ЗМІНИТИ РЕГІСТР(ВЕЛИКІ ЛІТЕРИ)
+// const string = 'JavaScript';
+// const letters = string.split(''); 
+// let invertedString = '';
+// // розбили рядок на масив
+
+// console.log(letters)
+// for(const letter of letters){
+//     console.log(letter);
+
+//     // if(letter === letter.toLowerCase()){
+//     //     console.log('Ця буква у нижньому регістрі', letter);
+//     //     invertedString += letter.toUpperCase();
+//     // }else{
+//     //     console.log('Ця буква у верхньому регістрі', letter);
+//     //     invertedString += letter.toLowerCase();
+//     // }
+
+//     invertedString += letter === letter.toLowerCase? letter.toUpperCase(): letter.toLowerCase();
+// }
+// console.log('Готовий рядок : ', invertedString);
+
+
+//  const title = 'Top 10 benefits of React framework';
+//  const words = title.toLowerCase();
+// //  console.log(words)
+// const string = words.split(' ')
+// //  console.log(string);
+// const slug = string.join('-');
+// // console.log(slug)
+// ланцюжок викликів
+// const result = title.toLowerCase().split(' ').join('-'); 
+// console.log(result);
+
+// ДОДАТИ ЧИСЛА ДВОХ МАСИВІВ
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+// const numbers = array1.concat(array2);
+// for(const number of numbers){
+//     total += number
+// }
+// console.log(total);
+
+// const cards = [
+//     'Cart-1',
+//     'Cart-2',
+//     'Cart-3',
+//     'Cart-4'
+// ]
+// const cartIndex = 'Cart-3'
+// const index = cards.indexOf(cartIndex)
+// console.log(index)
+// // ВИДАЛЕННЯ ЕЛЕМЕНТА ПО ІНДЕКСУ
+// cards.splice(index, 1) 
+// console.log(cards)
+
+// ДОДАВАННЯ ЕЛЕМЕНТУ ДО МАСИВУ
+// const newCart = 'Cart-5';
+// const index = 3;
+// cards.splice(iindex, 0, newCart);
+// console.log(cards);
+
+
+// ФУНКЦІЇ
+// const add = function (a, b) {
+//     console.log(a+b);
+//     console.log('lalalaa')
+// };
+// add(4,6);
+// add(10,1);
+
+
+// const fn = function(){
+//     console.log(1);
+//     console.log(2);
+//     console.log(3);
+// };
+// console.log('lalala',fn());
+
+
+// const calculateTotalPrice = function(items){
+// console.log('всередині функції',items);
+// let total = 0;
+// for(const item of items){
+//     total+=item;
+// };
+// return total;
+// };
+// console.log(calculateTotalPrice([1,4,7]));
+// console.log(calculateTotalPrice([10,15,17]));
+
+
+// Напиши функцію для перебирання масиву
+// const logItems = function(items){
+//     for(const item of items){
+// console.log(item);
+// };
+// };
+// logItems(['Mango', 'Pooli', 'Alex']);
+// logItems([1,3,5,7]);
+// logItems(['клавіатура', 'навушники', 'монітор']);
+
+
+
+// ЗНАЙДІТЬ НАЙМЕНШЕ ЧИСЛО
+
+// const numbers = [51, 9, 199,4, 65];
+// let smallNumber = numbers[0];
+// for(const number of numbers){
+//     if (number < smallNumber){
+//         smallNumber = number;
+//     }}
+// console.log(smallNumber)
+
+// ЗАЛИШОК АРГУМЕНТІВ
+// const fn = function(a, b, c, ...args){
+//     console.log(`${a} ${b} ${c} `);
+//     console.log(args);
+// };
+// fn('lala', 1, 2, 3);
+// fn(1, 2, 'ohoho', 6);
+
+// МОДУЛЬ 2. АРТЕМ
+
+// const arr = ['Jazz', 'Blues'];
+// arr.push('Roc-n-rol');
+// console.log(arr)
+// console.log(Array.isArray(arr)) тип масиву. має бути true
+
+// const a = [1,2,3];
+// const b = a;
+// a.push(4)
+// console.log(a);
+// console.log(b);
+
+// split перетворює з рядка у масив
+// join перетворює з масива у рядок
+// const str = "hello";
+// const result = str.split('');
+// console.log(result)
+
+// const array = [1,2,3];
+// array.push(5,6,7); додає елементи у кінець
+// array.pop();прибирає елементи з кінця
+// array.pop();
+// array.pop ();
+// console.log(array)
+
+//  const arr = [1,3,5];
+//  arr.unshift('hello','world'); додає елементи на початок рядка
+//  arr.shift();прибирає елементи з початку рядка
+//  console.log(arr)
+
+// const arr = [1,2,3,4,5];
+// arr.splice(2,1,90) 
+// додає,вирізає елементи. перше число-індекс числа, друге число - скільки елементів потрібно видалити, третє число - на яке число потрібно замінити число
+// console.log(arr)
+
+// const arr = [1,2,3,4,5];
+// const result = arr.slice(2,3);
+// console.log(arr);
+// console.log(result)
+
+// 1
+// let names = 'Jacob, William, Solomon';
+// let phone = '8962, 6783, 8909';
+// names = names.split(',');
+// phone = phone.split(',');
+
+// for(let i = 0; i < names.length, i < phone.length; i+=1){
+//     console.log(`${names[i]} - ${phone[i]}`)
+// }
+// console.log(names);
+// console.log(phone)
+
+
+// 2 прибрати перший і останній елемент у рядку
+// const string = 'Welcome to the future';
+// const arr = string.split(' ');
+// arr.pop();
+// arr.shift();
+// console.log(arr);
+// console.log(string);
+
+// 3 розвертає рядок
+// const string = 'Welcome to the future';
+// const arr = string.split('').reverse().join('');
+// console.log(arr)
+
+// 4 сортування масиву в алфавітному порядку за першою літерою елемента
+// const langs = ['python', 'javascript', 'c++', 'ruby'];
+// langs.sort((a,b) => a.localeCompare(b));
+// console.log(langs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -584,17 +584,153 @@
 // langs.sort((a,b) => a.localeCompare(b));
 // console.log(langs)
 
+// const arr = [1,4,6];
+// const arr1 = [21,34,46];
+// // declaration
+// function someName(arr, value){
+// for(let i = 0; i < arr.length; i+=1){
+//     arr[i]*=value;
+// }
+// }
+// someName(arr, 10);
+// someName(arr1, 5);
+// console.log(arr);
+// console.log(arr1);
+
+// expression
+// const someName = function(arr, value){
+//     for(let i = 0; i < arr.length; i+=1){
+//     arr[i]*=value;
+// }
+// }
+//  someName(arr, 10);
+// someName(arr1, 5);
+// console.log(arr);
+// console.log(arr1);
 
 
+// const arr = [42,56,13,6];
+// const arr1 = [9,67,89];
+// function add(param){
+//     let sum = 0;
+//     for(const num of param){
+//         sum+=num;
+//     }
+//     return sum;
+// }
+// console.log(add(arr));
+// console.log(add(arr1))
 
 
+// function add(){
+//     console.log('////////////')
+// for(const arg of arguments){
+//     console.log(arg)
+// }
+// }
+// add(1,4,6);
+// add(3,6,8,10);
+// add(6,9,11,16,18);
+
+// 1. індекс маси тіла
+// function calcBMI(weight, height){
+//     weight = Number(weight.replace(',' ,'.'));
+//     height = Number(height.replace(',', '.'));
+  
+//     // return Number(weight/Math.pow(height,2).toFixed(1));
+//     return Number(weight / height ** 2).toFixed(1); піднесення до степеня
+// }
+// const bmi = calcBMI('88,3', '1,75');
+// console.log(bmi);
 
 
+// 2.Напиши функцію (a,b) яка повертає найменше з чисел 
+// function min(a,b){
+//     if(a > b){
+//         return b;
+//     }return a;
+// }
+// console.log(min(2,4));
+// console.log(min(3,-1));
+// console.log(min(1,1));
+
+// 3.Площа прямокутника
+// Напиши функцію getRectArea(dimensions) 
+// function getRectArea(dimensions){
+//     dimensions = dimensions.split(' ');
+
+//     const first = Number(dimensions[0]);
+//     const second = Number(dimensions[1]);
+//     return first*second;
+//     console.log(first);
+// }
+// console.log(getRectArea('8 11'));
+// console.log(getRectArea('18 16'));
+// або
+// function getRectArea(dimensions){
+//         dimensions = dimensions.split(' ');
+//     return Number(dimensions[0]*Number(dimensions[1]))    
+//     }
+//     console.log(getRectArea('8 11'));
+//     console.log(getRectArea('18 16'));
+
+// 4.Логування елементів. Напиши Ф яка отримує масив та використовує цикл фор,який для кожного елемента масиву буде виводити в консоль повідомлення у форматі "номер елемента-елемент".Нумерація елементів починається з цифри 1.
+// function logItems(items){ 
+//     for(let i=0, num = 1; i < items.length; i+=1, num+=1){
+//         console.log(`${num} - ${items[i]}`);
+//     }
+// }
+// logItems(['Mango', 'Poly', 'Alex' ])
+// 😎 win+:
+
+// function printContactsInfo(names,phones){
+//     names = names.split(',');
+//     phones = phones.split(',');
+
+//     for(let i = 0; i < names.length, i<phones.length; i+=1)
+//     console.log(`${names[i]} - ${phones[i]}`);
+// }
+// printContactsInfo(
+//     'Alex, Jacob,Artem',
+//     '8637,6256,5167',
+// ) ;
 
 
+// 7.Середнє значення
+// function calAvarage(){
+//     const numbers = Array.from(arguments);
+//     let sum = 0;
+//     for(const number of numbers){
+//         sum+=number;
+//     }
+//     return sum / numbers.length
+// }
+// console.log(calAvarage(1,23,4,5));
+// console.log(calAvarage(14,8,19));
+// console.log(calAvarage(89,7,18));
+ 
+// 6.Пошук найбільшого елемента
+// function findNumber(){
+//     let max = arguments[0];
+//     for(const arg of arguments){
+//         if(max < arg){
+//             max = arg;
+//         }
+//     }
+//     return max;
+// }
+// console.log(findNumber(2,19,56,8));
+// console.log(findNumber(90,1,16));
 
-
-
+// 8.Форматування часу
+// function formatTime(minutes){
+//     const hours = Math.floor(minutes/60);
+//     minutes=minutes % 60;
+//     return `${hours.toString().padStart(2,0)} : ${minutes.toString().padStart(2,0)}`;
+// }
+// console.log(formatTime(70));
+// console.log(formatTime(450));
+// console.log(formatTime(1441));
 
 
 

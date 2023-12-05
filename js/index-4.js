@@ -36,9 +36,9 @@
 //     return total;
 //   }
 
-//   console.log(each(arr,add)) 
-//   console.log(each(arr,sum)) 
-//   console.log(each(arr,division)) 
+//   console.log(each(arr,add))
+//   console.log(each(arr,sum))
+//   console.log(each(arr,division))
 
 //     function add(first, second){
 //         return first + second;
@@ -71,8 +71,6 @@
 //     return first/second;
 // }
 
-
-
 // ПЕРЕБИРАЮЧІ МЕТОДИ МАСИВУ
 
 //ВИВЧИТИ
@@ -83,7 +81,7 @@
 // FOR EACH
 // const arr = [2, 5, 7, 9];
 // arr.forEach(function( idx){
-// console.log(idx) 
+// console.log(idx)
 // })
 // console.log(arr);
 
@@ -91,11 +89,10 @@
 //idx-індекс поточного елемента
 //arr-сам масив який перебирраємо
 // arr.forEach(function(item,i){
-    // console.log(`work with number ${item}`)
+// console.log(`work with number ${item}`)
 //    arr[idx]=item * 2;
 // })
-// console.log(arr)  
-
+// console.log(arr)
 
 // СТРІЛОЧНІ ФУНКЦІЇ
 //DECLARATION
@@ -138,7 +135,6 @@
 // }
 // createProduct({name:'apple', price:30,quantity:3}, logProduct);
 // createProduct({name:'lemon', price:20,quantity:5}, logTotalPrice);
-
 
 // Example2-калбек фуннкції
 
@@ -281,7 +277,7 @@
 // account.deposit(-600, handleSuccess, handleError);
 // account.deposit(600, handleSuccess, handleError);
 
-// EXAMPLE7 
+// EXAMPLE7
 // МЕТОД forEach
 // виконайте рефакторинг коду за допомогою методу foreach та стрілочні ф-ії
 // function logItems(items){
@@ -295,7 +291,7 @@
 // logItems(['🍣', '🍗', '🥗', '🍿']);
 
 // EXAMPLE8
-// FOREACH 
+// FOREACH
 // виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції
 // function calculateAverage(...args){
 //     let total=0;
@@ -314,8 +310,6 @@
 // console.log(calculateAverage(1,2,3,4));
 // console.log(calculateAverage(14,8,5));
 // console.log(calculateAverage(27,56,2,6));
-
-
 
 // ПЕРЕБИРАЮЧІ  МЕТОДИ
 // MAP
@@ -341,17 +335,17 @@
 //     skills:['HTML', 'react']
 //     }];
 
-    // const result = arr.map(item => item.skills.map(skill=>skill));
-    // console.log(result)
-    // const result = arr.flatMap(item => item.skills);
-    // console.log(result)
+// const result = arr.map(item => item.skills.map(skill=>skill));
+// console.log(result)
+// const result = arr.flatMap(item => item.skills);
+// console.log(result)
 
-    //////////////////////////////
-    // find - повертає один елемент який задовільнив умову;
-    // const arr = [1,2,3,4,5,6,7];
-    // const result = arr.find(item => item > 5);
-    // console.log(result)
-    // працює до першого true, якщо буде все false то буде undefined
+//////////////////////////////
+// find - повертає один елемент який задовільнив умову;
+// const arr = [1,2,3,4,5,6,7];
+// const result = arr.find(item => item > 5);
+// console.log(result)
+// працює до першого true, якщо буде все false то буде undefined
 
 // хто знає js?
 //  const arr = [{
@@ -384,7 +378,7 @@
 // filter - повертає усі елементи,які задовільняють умову;відібрати усі елементи по певній умові
 // const arr = [1,2,3,4,5,6,7];
 // const result = arr.filter(item => !(item%2)).map(item=>item*2);
-// console.log(result) 
+// console.log(result)
 
 /////////////////////////////////////////////////
 // every - повертає значення true якщо кожен елемент масиву задовільняє умову;
@@ -409,7 +403,7 @@
 // console.log(result)
 
 //////////////////////////////////////////////////////////
-// Some 
+// Some
 //   some -   якщо хоча б один елемент задовільняє умову
 
 // const numbers = [22,1,2,3,4,5,6,7,8];
@@ -420,9 +414,394 @@
 //     return !(item%2)});
 // console.log(result);
 
-
 /////////////////////////////////////////////////////////////
 // sort - сортує елементи у порядку спадання чи зростання
-const numbers = [11,4,7,2,9,15];
+// мутує початковий масив
+// const numbers = [11,4,7,2,9,15];
+// const result = numbers.sort((a,b) => b - a);
+// console.log('result', result);
+// console.log('numbers', numbers)
 
-const result = numbers.sort((a,b)=Ю)
+// const result = [...numbers].sort((a,b) => b - a); мотуючий масив\сортування за спаданням\зростанням
+// const result = numbers.sort();сортуємо по юнікоду
+// numbers.sort()//сортування по юнікоду
+// numbers.sort().reverse()//сортування по юнікоду з більшого до меншого
+// console.log('result', result);
+// console.log('numbers', numbers)
+
+// СОРТУВАННЯ РЯДКІВ
+// const str = ['b', 'R', 'a', 'A', 'i','q'];
+// // const result = str.sort();//сортування по юнікоду
+// const result = str.sort((a,b) => a.localeCompare(b))//сорутвання в алфавітному порядку
+// console.log(result)
+
+// СОРТУВАННЯ ПО КІЛЬКОСТІ ЛІТЕР У СЛОВІ
+// const test =['apple', 'car', 'white', 'js'];
+// test.sort((a,b)=>a.length - b.length);
+// console.log(test)
+////////////////////////////////////////////////////////////
+
+// REDUCE
+//єдиний метод масиву,який приймає не один колбек.
+//у будь якому випадку ми маємо повернути акумулятор
+// const numbers = [5,2,7,12,9,1];
+// const result = numbers.reduce((acc, item, idx, arr) => {
+//     acc += item;
+//     return acc
+// }, 0);
+// console.log(result)
+
+// const numbers = [5, 2, 7, 12, 9, 1];
+// const result = numbers.reduce((acc, item) => {
+//   const test = acc.push(item * 2);
+//   console.log(test);
+//   return acc;
+// }, []);
+// console.log(result);
+//НЕЯВНЕ ПОВЕРНЕННЯ.......
+// const numbers2 = [5, 2, 7, 12, 9, 1];
+// const result2 = numbers.reduce((acc, item) => {
+//   acc.push(item * 2);
+//   return acc;
+// }, []);
+// console.log(result2);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// EXAMPLE 1
+const cars = [
+  {
+    make: "Honda",
+    model: "CR-V",
+    type: "suv",
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Accord",
+    type: "sedan",
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: "Mazda",
+    model: "Mazda 6",
+    type: "sedan",
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: "Mazda",
+    model: "CX-9",
+    type: "suv",
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: "Toyota",
+    model: "4Runner",
+    type: "suv",
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Sequoia",
+    type: "suv",
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Tacoma",
+    type: "truck",
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "F-150",
+    type: "truck",
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Fusion",
+    type: "sedan",
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Explorer",
+    type: "suv",
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
+
+//EXAMPLE 1 - МЕТОД MAP
+// Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
+// [ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getModels = cars => {
+//     const models = cars.map(car => car.model);
+//     return models;
+//  };
+// СПРОЩЕННЯ КОДУ НИЖЧЕ
+// const getModels = cars => cars.map(car => car.model);
+//  console.log(getModels(cars));
+
+// EXAMPLE 2
+// Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним значенням властивості price залежно від переданої знижки
+// [ {
+//         make: 'Ford',
+//         model: 'Explorer',
+//         type: 'suv',
+//         amount: 6,
+//         price: 31660,
+//         onSale: false
+//     }]
+// const makeCarWithDiscount = (cars, discount) => {
+//     const result = cars.map (car => {
+//         return {
+//             ...car,
+//             price: car.price * 0.8
+//         };
+//     });
+// return result;
+// }
+// console.table(makeCarWithDiscount(cars,0.2));
+// console.table(makeCarWithDiscount(cars, 0.4))
+
+// Example 3 - Метод filter
+// Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж значення параметра threshold.
+// [ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const filterByPrice = (cars, threshold) => {
+//     const result = cars.filter(({price})=> price < threshold);
+//     return result;
+// };
+//оптимізований код нижче
+// const filterByPrice = (cars, threshold) => cars.filter(({price})=> price < threshold);
+
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 25000));
+
+// Example 4 - Метод filter
+// Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
+// [ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getCarsWithDiscount = cars => cars.filter(({onSale}) => onSale);
+// console.table(getCarsWithDiscount(cars));
+
+// Example 5 - Метод filter
+// Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається зі значенням параметра type.
+// [
+//   {
+//     make: "Ford",
+//     model: "Explorer",
+//     type: "suv",
+//     amount: 6,
+//     price: 31660,
+//     onSale: false,
+//   },
+// ];
+// const getCarsWithType = (cars, type) => cars.filter
+// (({type : carType}) => type === carType)
+// console.table(getCarsWithType(cars, "suv"));
+// console.table(getCarsWithType(cars, "sedan"));
+
+
+// Example 6 - Метод find
+// [ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getCarByModel = (cars, model) => cars.find(({model : carModel}) => model === carModel)
+
+// console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));
+
+
+// Example 7 - Метод sort
+// Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за зростанням значення якості amount.
+// console.log(cars)
+// const sortByAscendingAmount = cars => {
+//     return cars.sort((a,b) => a.amount - b.amount);
+// }
+// console.table(sortByAscendingAmount(cars));
+
+
+// Example 8 - Метод sort
+// Нехай функція sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення властивості price.
+
+// const sortByDescendingPrice = cars => [...cars].sort((a,b) => b.price - a.price);
+// console.log(cars)
+// console.table(sortByDescendingPrice(cars));
+
+// Example 9 - Метод sort
+// Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра order.
+// [ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const sortByModel = (cars, order) => {
+//     if(order === 'asc'){
+//         return [...cars].sort((a,b) => a.model.localeCompare(b.model))
+//     } else {
+//         return [...cars].sort((a,b) => b.model.localeCompare(a.model))
+//     }
+// }
+// ТЕРНАРНИЙ ОПЕРАТОР
+// const sortByModel = (cars, order) => 
+// [...cars].sort((a,b)=> order === 'asc ' ? a.model.localeCompare(b.model) : b.model.localeCompare(a.model));
+
+//АБО
+// const sortByModel = (cars, order) => [...cars].sort(({model: a}, {model:b}) =>
+// order === 'asc' ? a.localeCompare(b) : b.localeCompare(a))
+
+// console.table(sortByModel(cars, 'asc'));
+// console.table(sortByModel(cars, 'desc'));
+
+
+
+// Example 10 - Метод reduce
+// Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
+//[ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getTotalAmount = cars => cars.reduce((acc, {amount})=> acc + amount,0)
+
+// console.log(getTotalAmount(cars));
+
+
+// Example 11 - Ланцюжки методів
+// Нехай функція getAvailableCarNames повертає масив моделей автомобілів, але тільки тих, які зараз на розпродажі.
+//[ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getModelsOnSale = cars => cars.filter(({onSale}) => onSale)
+// .map(({model}, _, arr)=>{
+// console.log('cars',cars);
+// console.log('filter', arr);
+// return model;
+// } );
+//ОПТИМІЗАЦІЯ КОДУ
+// const getModelsOnSale = cars => cars.filter(({onSale}) => onSale).map(({model})=>model)
+
+// console.log(getModelsOnSale(cars));
+
+
+// Example 12 - Ланцюжки методів
+// Нехай функція getSortedCarsOnSale повертає масив автомобілів на розпродажі (Властивість onSale), відсортованих за зростанням ціни.
+//[ {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }]
+// const getSortedCarsOnSale = cars => 
+// cars.filter(({onSale})=>onSale).sort((a,b) => a.price - b.price);
+// console.log(cars)
+// console.table(getSortedCarsOnSale(cars));
+
+
+
+// const str = 'sdkghsuiokdhvikoahfozh';
+// {
+//   s: 2,
+//   k: 3,
+//   d: 2
+
+// const foo = str => str.split('').reduce((acc,item)=>{
+//   if(acc.hasOwnProperty(item)){
+//     acc[item] += 1
+//   }else{
+//     acc[item] = 1
+//   }
+//   return acc
+// },{});
+
+//ПЕРЕРОБИМО НА ТЕРНАРНИЙ ОПЕРАТОР
+// acc.hasOwnProperty(item) ? acc[item] +=1 : acc[item] = 1
+// return acc
+// }, {});
+// console.log(foo(str))
+///ЗВЕРХУ РІВЕНЬ СПІВБЕЕСІДИ
+
+// const cars2 = ["Ford", "Honda", "Mazda", "Toyota"]
+// const cars3 = []
+// Кількість авто 4:
+// 1 Ford
+// 2 Honda
+// 3 Mazda
+// 4 Toyota
+
+// Нажаль авто відсутні
+
+// const boo = arr => arr.reduce((acc,car,idx)=>{
+//   acc += `${idx + 1} - ${car}\n`;
+//   return acc}, 
+//   arr.length ? `Кількість авто ${arr.length}:\n` : {
+//   errorMessage: `Нажаль авто відсутні 😮`
+// });
+
+// console.log(boo(cars2));
+// console.log(boo(cars3));
+
+
+
+
+// const arr = [1, 2, 3, 4, 5];
+// const result = arr.filter(item => item !== 3)
+// console.log(result);

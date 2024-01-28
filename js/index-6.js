@@ -32,28 +32,32 @@ const list = document.querySelector('.js-list');
 // console.log(list.firstElementChild);
 // console.log(list.lastElementChild);
 
-//createElement
+//createElement!!!!!!!!!!!!!!!!
 // const li = document.createElement('li');
-// const li2 = document.createElement('li')
 // li.textContent = list.children.length + 1; 
 // li.classList.add('item') //додали клас до елемента
+// const li2 = document.createElement('li')
 // li2.textContent = list.children.length + 2;
 // li2.classList.add('item')
 
-//якщо ми додаємо html елемент ми можемо використовувати 3 можливості:
+//ПРИКЛАД З ДОДАВАННЯМ ПАРАГРАФА!!!!!!!!!!!!!!!
+// const li = document.createElement('li');
+// const p = document.createElement('p');
+// li.append(p)
+// p.textContent = list.children.length + 1; 
+// p.classList.add('item') //додали клас до елемента
+
+//якщо ми додаємо html елемент ми можемо використовувати 3 можливості:!!!!!!!!!!!!!!!!!
 //append можемо додати багато елементів
 //appendChild можемо додати лише один елемент
 //prepend (поміщає елемент на початок списку)
-// list.append(li, li2)
+// list.append(li)
 // console.log(li)
 
 
-//приклад шаблонних рядків
-const markup = `<li class = 'item'>${list.children.length + 1}</li>
-<li class = 'item'>${list.children.length + 2}</li>`
-
-//якщо потрібно перемістити у файл HTML розмітку використовуємо insertAdjacentHTML
+//приклад шаблонних рядків!!!!!!!!!!
+const markup = `<li class = 'item'><p>${list.children.length + 1}</p></li>`;
 list.insertAdjacentHTML('beforeend', markup)
 
-
+// якщо потрібно перемістити в файл HTML розмітку використовуємо insertAdjacentHTML
 

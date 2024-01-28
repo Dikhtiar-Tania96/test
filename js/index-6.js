@@ -22,7 +22,7 @@
 // title.style.fontSize='50px';
 
 
-const list = document.querySelector('.js-list');
+// const list = document.querySelector('.js-list');
 // console.dir(list.childNodes[0].textContent = 'lalala')
 // console.dir(list.children);
 // console.log([...list.children]);
@@ -56,8 +56,23 @@ const list = document.querySelector('.js-list');
 
 
 //приклад шаблонних рядків!!!!!!!!!!
-const markup = `<li class = 'item'><p>${list.children.length + 1}</p></li>`;
-list.insertAdjacentHTML('beforeend', markup)
-
 // якщо потрібно перемістити в файл HTML розмітку використовуємо insertAdjacentHTML
+// const markup = `<li class = 'item'><p>${list.children.length + 1}</p></li>`;
+// list.insertAdjacentHTML('beforeend', markup)
 
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// const markup = `<li class = 'item'>
+// <p>${list.children.length + 1}</p></li>`;
+
+// const markup2 = `<li class = 'item'>
+// <p>${list.children.length + 2}</p></li>`;
+// list.insertAdjacentHTML('beforeend', markup + markup2)
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//СТАТИЧНІ І ДИНАМІЧНІ МАСИВИ, ЖИВІ І НЕЖИВІ МАСИВИ
+// const list = document.querySelector('.js-list');
+const itemsStatic = document.querySelectorAll('.js-item');
+console.log(itemsStatic)  
+
+// const itemsDynamic = document.get

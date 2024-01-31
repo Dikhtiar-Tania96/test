@@ -70,9 +70,15 @@
 // list.insertAdjacentHTML('beforeend', markup + markup2)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//СТАТИЧНІ І ДИНАМІЧНІ МАСИВИ, ЖИВІ І НЕЖИВІ МАСИВИ
-// const list = document.querySelector('.js-list');
-const itemsStatic = document.querySelectorAll('.js-item');
-console.log(itemsStatic)  
 
-// const itemsDynamic = document.get
+
+//СТАТИЧНІ І ДИНАМІЧНІ МАСИВИ, ЖИВІ І НЕЖИВІ МАСИВИ
+const list = document.querySelector('.js-list');
+const itemsStatic = document.querySelectorAll('.js-item');//неживий масив,не бачить змін
+const itemsDynamic = document.getElementsByClassName('js-item');//живий масив
+
+const markup = `<li class = 'js-item'>${list.children.length + 1}</li>`;
+
+list.insertAdjacentHTML('beforeend', markup)
+console.log(itemsStatic);  
+console.log(itemsDynamic);

@@ -73,12 +73,125 @@
 
 
 //СТАТИЧНІ І ДИНАМІЧНІ МАСИВИ, ЖИВІ І НЕЖИВІ МАСИВИ
-const list = document.querySelector('.js-list');
-const itemsStatic = document.querySelectorAll('.js-item');//неживий масив,не бачить змін
-const itemsDynamic = document.getElementsByClassName('js-item');//живий масив
+// const list = document.querySelector('.js-list');
+// const itemsStatic = document.querySelectorAll('.js-item');//неживий масив,не бачить змін
+// const itemsDynamic = document.getElementsByClassName('js-item');//живий масив
 
-const markup = `<li class = 'js-item'>${list.children.length + 1}</li>`;
+// const markup = `<li class = 'js-item'>${list.children.length + 1}</li>`;
+// const markup2 = `<li class = 'js-item'>${list.children.length + 2}</li>`;
 
-list.insertAdjacentHTML('beforeend', markup)
-console.log(itemsStatic);  
-console.log(itemsDynamic);
+// list.insertAdjacentHTML('beforeend', markup + markup2)
+// console.log(itemsStatic);  
+// console.log(itemsDynamic);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+const cars = [
+    {
+      model: "Honda",
+      type: "Civic",
+      price: 12000,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+    },
+    {
+      model: "Audi",
+      type: "Q7",
+      price: 40000,
+      img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
+    },
+    {
+      model: "BMW",
+      type: "5 siries",
+      price: 9000,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
+    },
+    {
+      model: "Honda",
+      type: "Accord",
+      price: 20000,
+      img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
+    },
+    {
+        model: "Honda",
+        type: "Civic",
+        price: 12000,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+      },
+      {
+        model: "Audi",
+        type: "Q7",
+        price: 40000,
+        img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
+      },
+      {
+        model: "BMW",
+        type: "5 siries",
+        price: 9000,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
+      }
+];
+
+// {
+//     model: "Honda",
+//     type: "Civic",
+//     price: 12000,
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+//   }
+
+// I ВАРІАНТ
+const container = document.querySelector('.js-cars');
+// cars.forEach(({img, model, price,type}) => {
+// const li = document.createElement('li');
+// const image = document.createElement('img');
+// const h2 = document.createElement('h2');
+// const h3 = document.createElement('h3');
+// const p = document.createElement('p');
+
+// image.src = img;
+// image.alt = model;
+// image.style.width = '300px';
+// h2.textContent = model;
+// h3.textContent = type;
+// p.textContent = price;
+
+// li.append(image, h2, h3, p)
+// container.append(li)
+// })
+//вгорі довгий код для браузера
+
+//тепер легший
+// const markup = cars.map(({img, model, price,type}) => {
+// const li = document.createElement('li');
+// const image = document.createElement('img');
+// const h2 = document.createElement('h2');
+// const h3 = document.createElement('h3');
+// const p = document.createElement('p');
+
+// image.src = img;
+// image.alt = model;
+// image.style.width = '300px';
+// h2.textContent = model;
+// h3.textContent = type;
+// p.textContent = price;
+
+// li.append(image, h2, h3, p);
+// return li
+// });
+
+// container.append(...markup);
+// console.log(markup)
+
+
+// II ВАРІАНТ
+// const markup = cars.map(({img, model, price, type})=> 
+// `<li><img src="${img}" alt="${model}" class='car-image'>
+// <h2>${model}</h2>
+// <h3>${type}</h3>
+// <p>${price}</p>
+// </li>`).join('');
+// console.log(markup);
+// container.insertAdjacentHTML('beforeend', markup )
+// insertAdjacentHTML використовуємо при шаблонному рядку!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+

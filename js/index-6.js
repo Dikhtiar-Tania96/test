@@ -89,30 +89,35 @@
 
 const cars = [
     {
+      id:1,
       model: "Honda",
       type: "Civic",
       price: 12000,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
     },
     {
+      id:2,
       model: "Audi",
       type: "Q7",
       price: 40000,
       img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
     },
     {
+      id:3,
       model: "BMW",
       type: "5 siries",
       price: 9000,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
     },
     {
+      id:4,
       model: "Honda",
       type: "Accord",
       price: 20000,
       img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
     },
     {
+        id:5,
         model: "Honda",
         type: "Civic",
         price: 12000,
@@ -184,14 +189,36 @@ const container = document.querySelector('.js-cars');
 
 
 // II ВАРІАНТ
-// const markup = cars.map(({img, model, price, type})=> 
-// `<li><img src="${img}" alt="${model}" class='car-image'>
-// <h2>${model}</h2>
-// <h3>${type}</h3>
-// <p>${price}</p>
-// </li>`).join('');
+const markup = cars.map(({id,img, model, price, type})=> 
+`<li data-car-id=${id}><img src="${img}" alt="${model}" class='car-image'>
+<h2>${model}</h2>
+<h3>${type}</h3>
+<p>${price}</p>
+</li>`).join('');
 // console.log(markup);
-// container.insertAdjacentHTML('beforeend', markup )
+// container.insertAdjacentHTML("beforeend", markup);
+container.innerHTML = markup
 // insertAdjacentHTML використовуємо при шаблонному рядку!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//ДЕЛЕГУВАННЯ ПОДІЙ
+// container.addEventListener('click', onClick)
+// function onClick(evt){
+//   // console.log(evt.target);
+//   const parent = evt.target.closest('li');
+//   const {carId} = parent.dataset;
+//   const currentCar = cars.find(({id}) => Number(carId) === id)
+//   console.log(carId)//дай айді машини
+//   console.dir(currentCar)
+//   // const id = parent.getAttribute('data-car-id')
+// }
+
+//КОЛИ ВИКОРИСТОВУЄМО innerHTML, insertAdjacentHTML
+// innerHTML коли старе замінити на нове
+// коли нам потрібно очистити розмітку
+// container.innerHTML = '';
+
+
+// insertAdjacentHTML коли до старого потрібно додати нове
 
 

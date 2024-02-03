@@ -224,3 +224,86 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ПОДІЇ
+// const inputEl = document.querySelector('.js-input');
+// inputEl.addEventListener('input', onInput)//показує кожне натискання
+// // inputEl.addEventListener('change', onInput)//показує надпис коли інпут втрачає фокус
+// inputEl.addEventListener('change', onChange)
+
+// function onInput(evt){
+//   // console.log(evt)
+//   console.log(evt.currentTarget.value)//що саме друкує користувач
+// }
+
+// function onChange(evt){
+//   alert('Напишіть ще щось')
+// }
+
+
+//ФОРМА
+//SUBMIT
+// const form = document.querySelector('.js-form');
+// form.addEventListener('submit', onSubmit)
+
+// function onSubmit(evt){
+//   evt.preventDefault()
+//   // !!!!!!!!!!!!preventDefault застосовується лише з івентом(evt)
+//   const {userName, userEmail} = evt.currentTarget.elements;
+//   console.log(userName.value);
+//   console.log(userEmail.value);
+
+//   //ЯК ВІДПРАВИТИ ДАНІ КОРИСТУВАЧА
+//   const data = {
+//     name : userName.value,
+//     email : userEmail.value
+//   }
+//   console.log(data)
+// }
+
+
+
+//ЯК З ДОПОМОГОЮ CLICK МИ МОЖЕМО НА ЩОСЬ ВПЛИВАТИ
+// const button = document.querySelector('.js-click');
+// const box = document.querySelector('.js-box');
+// let step = 0;
+
+// button.addEventListener('click', onClick)
+
+// function onClick(){
+//   step += 50;
+//   box.style.marginTop = step + 'px';
+//   box.style.marginLeft = `${step}px`
+//  }
+
+///////////////////////////
+//ФУНКЦІОНАЛ З ТЕКСТОМ(ВІДКРИТИ БІЛЬШЕ СЛІВ У РЕЧЕННІ)
+// const titleAnimal = document.querySelector('.js-title-animal');
+// const list = document.querySelector('.js-list');
+// const maxLength = 7;
+// const totalLength = maxLength + 3;
+// const pointLength = 3;
+
+
+
+// function formatString(title){
+//         const result = title.textContent.slice(0, maxLength);
+//         const data = title.textContent.slice(maxLength);
+//         title.setAttribute('data-value', data);
+//         title.textContent = result + '...'; 
+//         title.addEventListener('click', onClick)
+//     };
+
+// [...list.children].forEach(formatString);
+
+
+// function onClick(evt){
+//     const element = evt.currentTarget;
+// if(element.textContent.length <= totalLength){
+//     const {value} = element.dataset;
+//     element.textContent = element.textContent.slice(0, maxLength) + value;
+// } else {
+//     formatString(element)
+// }};
+
+
+

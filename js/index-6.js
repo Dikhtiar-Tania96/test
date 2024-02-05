@@ -305,5 +305,123 @@
 //     formatString(element)
 // }};
 
+/////////////////////////////////////////////////////////////////////////////////
+//ПОДІЯ З КЛАВІАТУРОЮ.
+// const box = document.querySelector('.js-box');
+// const button = document.querySelector('.js-click');
+// button.addEventListener('click', onclick);
 
+// function onClick(){
+//     box.classList.remove('box-hidden'); 
+//     document.addEventListener('keydown', onKey);
+// };
+
+// function onKey(evt){
+//     // console.log(evt.code);
+//     if(evt.code === 'Escape'){
+//         box.classList.add('box-hidden');
+//         document.removeEventListener('keydown', onKey)
+//     };
+// }
+///////КОД НЕ ПРАЦЮЄ!!!!!
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+//при роботі з клавішами копіювання(копіпаст)заблокувати копіювання
+// document.addEventListener('keydown', onKey);
+
+// function onKey(evt){
+//     // console.log(evt);
+//     if(evt.ctrlKey && evt.code === 'KeyC'){
+//         console.log('copy past');
+//         evt.preventDefault()
+//     }
+// }
+
+///////////////////////////////
+//evt форми найскладніше
+
+const cars = [
+    {
+      id:1,
+      model: "Honda",
+      type: "Civic",
+      price: 12000,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+    },
+    {
+      id:2,
+      model: "Audi",
+      type: "Q7",
+      price: 40000,
+      img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
+    },
+    {
+      id:3,
+      model: "BMW",
+      type: "5 siries",
+      price: 9000,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
+    },
+    {
+      id:4,
+      model: "Honda",
+      type: "Accord",
+      price: 20000,
+      img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
+    },
+    {
+        id:5,
+        model: "Honda",
+        type: "Civic",
+        price: 12000,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+      },
+      {
+        model: "Audi",
+        type: "Q5",
+        price: 70000,
+        img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
+      },
+      {
+        model: "BMW",
+        type: "5 siries",
+        price: 9000,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
+      }
+];
+
+// {
+//     id:1,
+//     model: "Honda",
+//     type: "Civic",
+//     price: 12000,
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+//   },
+const list = document.querySelector('.ul-list');
+const form = document.querySelector('.js-search-form');
+form.addEventListener('submit', onSearch);
+
+function createMarkup(arr){
+    const markup = arr.map(({id, model, type, price, img})=>
+    `<li data-id="${id}">
+    <img src="${img}" alt="${model}" width = '400' />
+    <h2>${model}</h2>
+    <h3>${type}</h3>
+    <p>${price}</p>
+  </li>`).join('');
+  return markup
+}
+list.insertAdjacentHTML('beforeend', createMarkup(cars))
+
+function onSearch(evt){
+    evt.preventDefault()//блокує відправку форми
+    const { query, type } = evt.currentTarget.elements;
+
+    const result = cars.filter(item => item[type.value] === item[query.value])
+
+    // console.log(query);
+    // console.log(type);
+    console.log(result)
+}
 

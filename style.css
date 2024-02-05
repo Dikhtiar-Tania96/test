@@ -15,3 +15,7 @@
     height: 50px;
     background-color: blueviolet;
 }
+
+.box-hidden{
+    display: none;
+}

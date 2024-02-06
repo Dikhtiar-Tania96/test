@@ -416,12 +416,11 @@ list.insertAdjacentHTML('beforeend', createMarkup(cars))
 
 function onSearch(evt){
     evt.preventDefault()//блокує відправку форми
-    const { query, type } = evt.currentTarget.elements;
+    const { query, option } = evt.currentTarget.elements;
+console.log(option.value)
 
-    const result = cars.filter(item => item[type.value] === item[query.value])
+  const result = cars.filter(item => item[option.value].toLowerCase() === query.value.toLowerCase())
+  list.innerHTML = createMarkup(result);
+  }
 
-    // console.log(query);
-    // console.log(type);
-    console.log(result)
-}
 

@@ -102,8 +102,18 @@ function createMarkup(){
   let markup = '';
 
   for(let i = 0; i < 9; i +=1){
-    markup += `<div class='item'></div>`
+    markup += `<div class='item js-target'></div>`
   }
 
-  content.innerHTML()
+  content.innerHTML = markup;
+}
+createMarkup()
+
+content.addEventListener('click', onClick);
+
+function onClick(evt){
+  if(!evt.target.classList.contains('.js-target')){
+    return;
+  }
+  console.log(evt.target)
 }

@@ -156,5 +156,14 @@
 // }
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+const input = document.querySelector('.js-input');
+input.addEventListener('input',onSearch );
+const data = [
+  {name:'Samsung', price : 720},
+ {name:'Iphone', price : 50000}
+ ];
 
-
+function onSearch(evt){
+  console.log(evt.currentTarget.value)
+}
+console.log(_.debounce)

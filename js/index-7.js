@@ -97,23 +97,64 @@
 // }
 
 
-const content = document.querySelector('.js-content');
-function createMarkup(){
-  let markup = '';
+// const content = document.querySelector('.js-content');
 
-  for(let i = 0; i < 9; i +=1){
-    markup += `<div class='item js-target'></div>`
-  }
+// const wins = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [1, 4, 7],
+//     [2, 5, 8],
+//     [3, 6, 9],
+//     [1, 5, 9],
+//     [3, 5, 7],
+//   ];
 
-  content.innerHTML = markup;
-}
-createMarkup()
+// let player = 'X';
 
-content.addEventListener('click', onClick);
+// const historyX = [];
+// const historyY = [];
 
-function onClick(evt){
-  if(!evt.target.classList.contains('.js-target')){
-    return;
-  }
-  console.log(evt.target)
-}
+// function createMarkup(){
+//   let markup = '';
+
+//   for(let i = 1; i <= 9; i +=1){
+//     markup += `<div class='item js-target' data-id = "${i}"></div>`
+//   }
+
+//   content.innerHTML = markup;
+// }
+// createMarkup()
+
+// content.addEventListener('click', onClick);
+
+// function onClick(evt){
+//   const {target} = evt;
+//   if(!target.classList.contains('js-target') || target.textContent){
+//     return;
+//   }
+
+//   const {id} = target.dataset;
+
+//   if(player === "X"){
+//     historyX.push(Number(id))
+//     console.log(inWinner(historyX));
+//     console.log('historyX', historyX)
+//   }else{
+//     historyY.push(Number(id))
+//     console.log('historyY', historyY)
+//   }
+//   // console.log(id)
+//   target.textContent = player;
+//   player = player === 'X' ? "O" : "X";
+//   // console.log(evt.target)
+// }
+
+// // some  every  includes
+// function inWinner(arr){
+//   return wins.some(item => item.every(num => arr.includes(num)))
+// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+

@@ -163,6 +163,31 @@
 
 
 
- const promise = fetch("https://pokeapi.co/api/v2/pokemon/ditto");
- 
- promise.then(resp => resp.json()).then(data => console.log(data))
+//  const promise = fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+//  promise.then(resp => resp.json()).then(data => console.log(data))
+
+
+///////////////////////////////////////////////GAMES
+const start = document.querySelector('.js-start');
+const container = document.querySelector('.js-container');
+
+start.addEventListener('click', onStart);
+
+function onStart(){
+  const promises= [...container.children].map((item) => createPromise());
+  Promise.allSettled(promises).then((prom) =>{
+console.log(prom);
+  })
+}
+
+
+function createPromise(){
+  return new Promise((res, rej)=>{
+    const random = Math.random();
+    if(random > 0.5){
+      res('😄')
+    } else {
+      rej ('😡')
+    }
+  })
+}
